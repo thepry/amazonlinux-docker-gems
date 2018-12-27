@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  linux:
+    build:
+      context: .
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./builded:/amazonlinuxdocker/builded
+      - ./scripts:/amazonlinuxdocker/scripts
