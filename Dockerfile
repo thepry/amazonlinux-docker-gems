@@ -21,3 +21,4 @@ RUN wget ftp://ftp.freetds.org/pub/freetds/stable/freetds-1.00.92.tar.gz && \
       make && \
       make install
 
+RUN yum install -y postgresql-devel

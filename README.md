@@ -79,3 +79,50 @@ bash-4.2# ldd /usr/local/rvm/gems/ruby-2.5.3/gems/tiny_tds-2.1.1/lib/tiny_tds/ti
 
 
 ```
+
+
+### pg example:
+
+
+```
+  make bash
+  make GEM=pg VERSION=1.2.2 install
+  make prepare_packing
+  mkdir -p /amazonlinuxdocker/tmp/lib
+
+  cp /usr/lib64/libpq.so.5 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libpthread.so.0 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libdl.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libcrypt.so.1 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libm.so.6 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libc.so.6 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libssl.so.10 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libcrypto.so.10 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libkrb5.so.3 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libcom_err.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libgssapi_krb5.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libldap_r-2.4.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /lib64/ld-linux-x86-64.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libk5crypto.so.3 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libz.so.1 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libkrb5support.so.0 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libkeyutils.so.1 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libresolv.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/liblber-2.4.so.2 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libsasl2.so.3 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libssl3.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libsmime3.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libnss3.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libnssutil3.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libplds4.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libplc4.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libnspr4.so /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libselinux.so.1 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/librt.so.1 /amazonlinuxdocker/tmp/lib/.
+  cp /usr/lib64/libpcre.so.1 /amazonlinuxdocker/tmp/lib/.
+
+  make GEM=pg VERSION=1.2.2 create_zip
+
+  exit
+```
+
