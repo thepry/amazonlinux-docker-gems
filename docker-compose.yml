@@ -7,5 +7,5 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./builded:/amazonlinuxdocker/builded
+      - ./build:/amazonlinuxdocker/build
       - ./scripts:/amazonlinuxdocker/scripts

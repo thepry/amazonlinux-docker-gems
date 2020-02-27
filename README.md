@@ -22,9 +22,9 @@ make GEM=sqlite3 VERSION=1.3.13 install_and_pack
 ```
 
 After that docker container will be started, gem will be installed and packed.
-The `./builded/sqlite3-1.3.13.zip` will be created.
+The `./build/sqlite3-1.3.13.zip` will be created.
 
-If you build gem again it will delete the existing zip file from the `builded` folder.
+If you build gem again it will delete the existing zip file from the `build` folder.
 
 
 ### Complex gem example:
@@ -64,7 +64,7 @@ exit
 
 ```
 
-The `./builded/tiny_tds-2.1.1.zip` will be created.
+The `./build/tiny_tds-2.1.1.zip` will be created.
 
 
 `ldd` command is helpful when you need to find out which libraries are required by gem

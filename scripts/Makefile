@@ -15,12 +15,12 @@ prepare_packing:
 
 create_zip:
 	make delete_existing_zip
-	cd /amazonlinuxdocker/tmp/ && zip -r /amazonlinuxdocker/builded/${GEM}-${VERSION}.zip ruby lib
+	cd /amazonlinuxdocker/tmp/ && zip -r /amazonlinuxdocker/build/${GEM}-${VERSION}.zip ruby lib
 
 create_zip_with_libs:
 	make delete_existing_zip
-	cd /amazonlinuxdocker/tmp/ && zip -r /amazonlinuxdocker/builded/${GEM}-${VERSION}.zip ruby lib
+	cd /amazonlinuxdocker/tmp/ && zip -r /amazonlinuxdocker/build/${GEM}-${VERSION}.zip ruby lib
 
 delete_existing_zip:
-	cd /amazonlinuxdocker/builded/ && rm -f ${GEM}-${VERSION}.zip
+	cd /amazonlinuxdocker/build/ && rm -f ${GEM}-${VERSION}.zip
 
